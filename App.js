@@ -7,7 +7,7 @@ import {
   Button,
   Dimensions
 } from 'react-native';
-import { createDrawerNavigator  } from 'react-navigation'
+import { createDrawerNavigator, createStackNavigator, createSwitchNavigator   } from 'react-navigation'
 
 // Hide Warning
 import { YellowBox } from 'react-native'
@@ -19,6 +19,37 @@ var { width } = Dimensions.get('window');
 // Components
 import HomeScreen from './src/components/HomeScreen'
 import NotificationScreen from './src/components/Notifications'
+import SelectDowncreen from './src/components/SelectDown'
+import RabuDownScreen from './src/components/RabuDown'
+import SelectYearScreen from './src/components/SelectYear'
+import ShowdataScreen from './src/components/Showdata'
+import InputDownScreen from './src/components/InputDown'
+
+const RootStack = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen
+    },
+    SelectDown: {
+      screen: SelectDowncreen
+    },
+    RabuDown: {
+      screen: RabuDownScreen
+    },
+    SelectYear: {
+      screen: SelectYearScreen
+    },
+    Showdata: {
+      screen: ShowdataScreen
+    },
+    InputDown: {
+      screen: InputDownScreen
+    }
+  },
+  {
+    headerMode: 'none'
+  }
+);
 
 // congig Drawer
 let routeConfig = {
@@ -53,6 +84,15 @@ let drawerNavigatorConfig = {
 //     screen: NotificationScreen,
 //   },
 // });
+const AppDrawer = createDrawerNavigator(routeConfig, drawerNavigatorConfig);
 
-const App = createDrawerNavigator(routeConfig, drawerNavigatorConfig);
-export default App
+const App =  createSwitchNavigator(
+  {
+    App: AppDrawer,
+    Cal: RootStack
+  },
+  {
+    initialRouteName: 'App',
+  }
+);
+export default RootStack

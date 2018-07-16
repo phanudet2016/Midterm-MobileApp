@@ -16,14 +16,13 @@ export default class Header extends Component {
         <TouchableOpacity 
           style={{marginLeft: 10}}
           onPress={() => {
-            // this.props.navigation.openDrawer();  
+            this.props.navigation.navigate('SelectDown')  
           }}>
           {/* <Image
             style={{ width: 20, height: 20}}
             source={require('../asset/menu.png')}
           /> */}
-          <Ionicons name="md-appstore" size={30} color="#fff"/>
-          
+          <Ionicons name="ios-arrow-back-outline" size={30} color="#fff"/>
         </TouchableOpacity>
       </View>
     );

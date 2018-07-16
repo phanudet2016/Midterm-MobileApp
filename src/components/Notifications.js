@@ -16,7 +16,7 @@ export default class Notifications extends Component {
     static navigationOptions = {
       drawerLabel: 'Notifications',
       drawerIcon: ({ tintColor }) => (
-        <Ionicons name="md-apps" size={25} color={tintColor}/>
+        <Ionicons name="md-document" size={25} color={tintColor}/>
       ),
     };
   
