@@ -19,11 +19,11 @@ export default class RabuDown extends Component {
       return (
         <Container>
         <HeaderBackSelectDown {...this.props}/>
-        <Content  style={{paddingLeft: 10, paddingTop: 8}}>
-          <Card  style={{width:387}}>
+        <Content  style={{paddingLeft: 5, paddingTop: 8}}>
+          <Card  style={{width:345}}>
           <CardItem>
           <Ionicons name="ios-basket" size={30} color="rgb(52,122,255)"/>
-              <Text style={{paddingLeft:10}}>เลือกแบบเปอร์เซ็นต์{price}</Text>
+              <Text style={{paddingLeft:10}}>เลือกแบบเปอร์เซ็นต์</Text>
              </CardItem>
             <CardItem>
               <Text>10%</Text>
@@ -31,7 +31,7 @@ export default class RabuDown extends Component {
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('SelectYear', {percen: 10, price: price, URL: URL})}
                 >
-                    <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                    <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
                 </TouchableOpacity>
               </Right>
              </CardItem>
@@ -41,7 +41,7 @@ export default class RabuDown extends Component {
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('SelectYear', {percen: 15, price: price, URL: URL})}
                 >
-                    <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                    <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
                 </TouchableOpacity>
               </Right>
              </CardItem>
@@ -51,7 +51,7 @@ export default class RabuDown extends Component {
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('SelectYear', {percen: 20, price: price, URL: URL})}
                 >
-                    <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                    <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
                 </TouchableOpacity>
               </Right>
              </CardItem>
@@ -61,7 +61,7 @@ export default class RabuDown extends Component {
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('SelectYear', {percen: 25, price: price, URL: URL})}
                 >
-                    <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                    <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
                 </TouchableOpacity>
               </Right>
              </CardItem>
@@ -71,7 +71,7 @@ export default class RabuDown extends Component {
                 <TouchableOpacity
                     onPress={() => this.props.navigation.navigate('SelectYear', {percen:30, price: price, URL: URL})}
                 >
-                    <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                    <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
                 </TouchableOpacity>
               </Right>
              </CardItem>

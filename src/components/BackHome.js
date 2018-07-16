@@ -22,7 +22,7 @@ export default class Header extends Component {
             style={{ width: 20, height: 20}}
             source={require('../asset/menu.png')}
           /> */}
-          <Ionicons name="ios-arrow-back-outline" size={30} color="#fff"/>
+          <Ionicons name="ios-arrow-round-back-outline" size={30} color="#fff"/>
         </TouchableOpacity>
       </View>
     );

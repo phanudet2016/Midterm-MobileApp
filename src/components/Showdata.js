@@ -34,16 +34,14 @@ export default class SelectDown extends Component {
         let percen = this.props.navigation.getParam('percenToselectY');
         let price = this.props.navigation.getParam('price');
         
-        let amountDown
+        let amountDown = ''
         let payDownSibPer = this.props.navigation.getParam('payDownSibPer');
-        if (payDownSibPer !== null) {
-            amountDown = payDownSibPer
-            console.log(amountDown)
-        } else if (payDownSibPer === NaN) {
-            // amountDown = (price * percen) / 100
+        if (payDownSibPer) {
+            amountDown = +payDownSibPer
+        } else {
+            amountDown = (price * percen) / 100
             console.log(55)
         }
-        console.log(payDownSibPer, amountDown)
         // เงินดาวน์
         // let amountDown = (price * percen) / 100
         // ค่างวด
@@ -66,17 +64,16 @@ export default class SelectDown extends Component {
     }
 
     render() {
+    let pic
     let interest = this.props.navigation.getParam('interest');
     let percen = this.props.navigation.getParam('percenToselectY');
     let price = this.props.navigation.getParam('price');
+    let URL = this.props.navigation.getParam('URL');
       return (
         <Container>
         <HeaderBackHome {...this.props}/>
-        <Content  style={{paddingLeft: 10, paddingTop: 8}}>
-          <Card  style={{width:387}}>
-          <CardItem cardBod style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}y>
-                <Image source={require('../asset/yaris.png')} style={{height: 200, width: null, flex: 1}}/>
-            </CardItem>
+        <Content  style={{paddingLeft: 5, paddingTop: 8}}>
+          <Card  style={{width:345}}>
           <CardItem>
           <Ionicons name="ios-basket" size={30} color="rgb(52,122,255)"/>
               <Text style={{paddingLeft:10}}>รายละเอียดการผ่อนรถยนต์</Text>

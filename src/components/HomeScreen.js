@@ -26,28 +26,12 @@ export default class HomeScreen extends Component {
 
   render() {
     return (
-      //   <View style={{ flex: 1, flexDirection: 'column'}}>
-      //   <HeaderMenu {...this.props}/>
-      //   <View style={{ flex: 1, backgroundColor: '#fff',alignItems: 'center',justifyContent: 'center'}}>
-      //     <Text style={{ fontWeight: 'bold', fontSize: 22, color: 'rgb(110,110,110)'}}>
-      //       This is Home Screen
-      //     </Text>
-      //     <TouchableHighlight 
-      //       style={{ margin: 20, width: 200, height: 45, backgroundColor: 'darkviolet', padding: 10, alignItems: 'center'}}
-      //       onPress={() => this.props.navigation.navigate('Notifications')}
-      //      >
-      //       <Text style={{color: '#FFF', fontSize: 18,}}>
-      //           Go to Notifications
-      //       </Text>
-      //     </TouchableHighlight>
-      //   </View>
-      // </View>
       <Container>
         <HeaderMenu {...this.props}/>
-        <Content style={{paddingLeft: 10, paddingTop: 8}}>
+        <Content style={{paddingLeft: 5, paddingTop: 8}}>
 
           {/********************************** Yaris *****************************************************/}
-          <Card style={{width:387}}>
+          <Card style={{width:345}}>
             <CardItem style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}>
               <Left>
                 <Thumbnail source={require('../asset/yaris.png')} />
@@ -74,12 +58,12 @@ export default class HomeScreen extends Component {
           </Card>
           
           {/********************************** Vios *****************************************************/}
-          <Card style={{width:387}}>
+          <Card style={{width:345}}>
             <CardItem style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}>
               <Left>
                 <Thumbnail source={require('../asset/vios.png')} />
                 <Body>
-                  <Text>Yaris</Text>
+                  <Text>Vios</Text>
                   <Text note>670,000 บาท</Text>
                 </Body>
               </Left>
@@ -101,12 +85,12 @@ export default class HomeScreen extends Component {
           </Card>
 
           {/********************************** Altis *****************************************************/}
-          <Card style={{width:387}}>
+          <Card style={{width:345}}>
             <CardItem style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}>
               <Left>
                 <Thumbnail source={require('../asset/altis.png')} />
                 <Body>
-                  <Text>Yaris</Text>
+                  <Text>Altis</Text>
                   <Text note>990,000 บาท</Text>
                 </Body>
               </Left>
@@ -128,12 +112,12 @@ export default class HomeScreen extends Component {
           </Card>
           
           {/********************************** C-HR *****************************************************/}
-          <Card style={{width:387}}>
+          <Card style={{width:345}}>
             <CardItem style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}>
               <Left>
                 <Thumbnail source={require('../asset/c-hr.png')} />
                 <Body>
-                  <Text>Yaris</Text>
+                  <Text>C-HR</Text>
                   <Text note>1,100,000 บาท</Text>
                 </Body>
               </Left>
@@ -155,12 +139,12 @@ export default class HomeScreen extends Component {
           </Card>
 
           {/********************************** Camry *****************************************************/}
-          <Card style={{width:387}}>
+          <Card style={{width:345}}>
             <CardItem style={{borderBottomColor: '#47315a',borderBottomWidth: 1 / PixelRatio.get()}}>
               <Left>
                 <Thumbnail source={require('../asset/camry.png')} />
                 <Body>
-                  <Text>Yaris</Text>
+                  <Text>Camry</Text>
                   <Text note>1,800,000 บาท</Text>
                 </Body>
               </Left>

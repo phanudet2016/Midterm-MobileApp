@@ -30,7 +30,7 @@ export default class InputDownScreen extends Component {
         let URL = this.props.navigation.getParam('URL');
         let price = this.props.navigation.getParam('price');
         let payDownSibPer = (price * 10) / 100
-        if (this.state.amountDown < payDownSibPer) {
+        if (this.state.amountDown <= payDownSibPer) {
             Alert.alert('กรุณาระบุจำนวนเงินดาวน์ให้มากกว่า 10%')
         } else {
         this.props.navigation.navigate('SelectYear', {percen: 10, price: price, payDownSibPer: this.state.amountDown, URL: URL})
@@ -42,15 +42,15 @@ export default class InputDownScreen extends Component {
       return (
         <Container>
         <HeaderBackSelectDown {...this.props}/>
-        <Content  style={{paddingLeft: 10, paddingTop: 8}}>
-          <Card  style={{width:387}}>
+        <Content  style={{paddingLeft: 5, paddingTop: 8}}>
+          <Card  style={{width:345}}>
           <CardItem>
           <Ionicons name="ios-basket" size={30} color="rgb(52,122,255)"/>
               <Text style={{paddingLeft:10}}>ระบุจำนวนเงินดาวน์</Text>
              </CardItem>
             <CardItem>
             <TextInput
-                    style={{height: 40, width:350,borderColor: '#fff', borderWidth: 1}}
+                    style={{height: 40, width:310,borderColor: '#fff', borderWidth: 1}}
                     keyboardType='numeric'
                     onChangeText={this.handleDown}
                 />

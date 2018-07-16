@@ -15,22 +15,23 @@ import { Container, Header, Content, Card, CardItem, Text, Icon, Right} from 'na
 export default class SelectDown extends Component {
     render() {
     const price = this.props.navigation.getParam('price');
+    const URL = this.props.navigation.getParam('URL');
       return (
         <Container>
         <HeaderBackHome {...this.props}/>
-        <Content  style={{paddingLeft: 10, paddingTop: 8}}>
-          <Card  style={{width:387}}>
+        <Content  style={{paddingLeft: 5, paddingTop: 8}}>
+          <Card  style={{width:345}}>
           <CardItem>
           <Ionicons name="ios-basket" size={30} color="rgb(52,122,255)"/>
-              <Text style={{paddingLeft:10}}>เลือกรูปแบบการดาวน์{price}</Text>
+              <Text style={{paddingLeft:10}}>เลือกรูปแบบการดาวน์</Text>
              </CardItem>
             <CardItem>
               <Text>ระบุเงินดาวน์</Text>
-              <Right style={{paddingLeft:210}}>
+              <Right style={{paddingLeft:205}}>
               <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('InputDown', {price: price})}
+                onPress={() => this.props.navigation.navigate('InputDown', {price: price, URL: URL})}
               >
-                <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
               </TouchableOpacity>
               </Right>
              </CardItem>
@@ -38,9 +39,9 @@ export default class SelectDown extends Component {
               <Text>เลือกแบบเปอร์เซ็นต์</Text>
               <Right style={{paddingLeft:160}}>
               <TouchableOpacity
-                onPress={() => this.props.navigation.navigate('RabuDown', {price: price})}
+                onPress={() => this.props.navigation.navigate('RabuDown', {price: price, URL: URL})}
               >
-                <Ionicons name="ios-arrow-forward-outline" size={30} color="rgb(52,122,255)"/>
+                <Ionicons name="md-arrow-forward" size={20} color="rgb(52,122,255)"/>
               </TouchableOpacity>
               </Right>
              </CardItem>
